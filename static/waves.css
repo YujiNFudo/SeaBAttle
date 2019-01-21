@@ -1,0 +1,44 @@
+ /*decorating waves*/
+
+.content {
+  padding: 300px 0;
+  background: #fff;
+  position: relative; }
+
+.wave {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  z-index: 123;
+  top: 415px; }
+
+.wave__one {
+  background: url("/images/wave_top.png") repeat-x;
+  width: 7000px;
+  height: 218px;
+  animation: waves 15s infinite linear;
+  position: absolute;
+  top: 0; }
+
+.wave__two {
+  background: url("/images/wave_top_opacity.png") repeat-x;
+  width: 7000px;
+  height: 218px;
+  animation: waves 10s infinite linear;
+  position: relative;
+  top: 0; }
+.wave__three {
+  background: rgb(53, 66, 255);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0px; 
+}
+
+@keyframes waves {
+  0% {
+    margin-left: 0; }
+  100% {
+    margin-left: -1938px; } 
+}

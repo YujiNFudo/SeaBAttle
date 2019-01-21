@@ -1,0 +1,57 @@
+/*decorating quest block*/
+
+#questArea {
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: rgba(10,10,10,.3);
+	position: absolute;
+	display: none;
+}
+#questWindow {
+	padding: 50px 100px;
+			width: 40%;
+			height: 50%;
+			border-radius: 2px;
+			border: 10px solid rgb(0,120,255);
+			background: #fff;
+			position: absolute;
+
+			top: 15%;
+			left: 22.5%;
+}
+#answ1,#answ2,#answ3,#answ4,#questHeader {
+	position: absolute;
+	border-radius: 3px;
+	padding: .5em 1em;
+	font-size: 2em;
+	text-align: center;
+	background: #f9f9f9;
+	border-bottom: 1px solid rgb(0,180,255);
+	border-top: 1px solid rgb(0,180,255);
+	font-family: sans-serif;
+}
+#answ1,#answ2,#answ3,#answ4 {
+	top: 50%;
+}
+#answ3,#answ4 {
+	top: 70%;
+}
+#questHeader {
+	width: 80%;
+	margin-left: calc(50% - 52%);
+	margin-top: calc(50% - 43%);
+}
+#answ1 {
+	left: 15%;
+}
+#answ2 {
+	right: 15%;
+}
+#answ3 {
+	left: 15%;
+}
+#answ4 {
+	right: 15%;
+}

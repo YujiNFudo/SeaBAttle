@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form</title>
+	<style>
+		body {
+			background: rgb(0,180,255);
+			font-family: sans-serif;
+
+		}
+		.form-wrapper {
+			padding: 50px 100px;
+			width: 40%;
+			height: 50%;
+			border-radius: 2px;
+			border: 10px solid rgb(0,120,255);
+			background: #fff;
+			position: absolute;
+
+			top: 15%;
+			left: 22.5%;
+		}
+		.form-wrapper form {
+			width: 100%;
+			height: 100%;
+			text-align: center;
+		}
+		input {
+			display: inline-block;
+		}
+		input,select:focus {
+			outline:none;
+		}
+		input[data-for="name"] {
+			border: none;
+			background: rgba(0,0,0,.01);
+			text-align: center;
+			width: 100%;
+			border-bottom: 1px solid lightblue;
+			padding: 20px 0px;
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+		input[data-for="answr"] {
+			border: none;
+			background: rgba(0,0,0,.01);
+			text-align: center;
+			border-bottom: 1px solid lightblue;
+			padding: 10px 0px;
+			font-size: 20px;
+		}
+		input[data-for="answ"] {
+			border: none;
+			background: rgba(0,0,0,.01);
+			text-align: center;
+			border-bottom: 1px solid lightblue;
+			padding: 10px 0px;
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+		input[type="submit"] {
+			position: absolute;
+			right: 0px;
+			bottom: 0px;
+			border: none;
+			background: rgb(0,120,255);
+			border-left: 2px solid rgb(0,180,255);
+			border-top: 2px solid rgb(0,180,255);
+			color: white;
+			text-align: center;
+			padding: 2px;
+			width: 40px;
+			height: 40px;
+			font-size: 20px;
+		}
+		select {
+			border: none;
+			background: rgba(0,0,0,.01);
+			text-align: center;
+			border-bottom: 1px solid lightblue;
+			padding: 10px 0px;
+			font-size: 15px;
+		}
+		label:nth-child(1) {
+			color: rgb(0,0,0);
+			font-size: 25px;
+			font-weight: bold;
+		}
+		label[data-for="last"] {
+			font-weight: bold;
+		}
+		.col {
+			display: inline-block;
+			width: 49%;
+			text-align: center;
+			margin-top: 15px;
+
+		}
+		.col label {
+			color: rgba(0,0,0,.5);
+			font-size: 15px;
+			font-weight: bold;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="form-wrapper">
+		<form action="addQuestion" method="post">
+			<label>Название</label><br>
+			<input name="name" type="text" data-for="name">
+			<label data-for="last">Тема вопроса</label><br>
+			<select name="types[]">
+			    <option disabled>Выберите тему</option>
+			    <option value="Физика">Физика</option>
+			    <option selected value="Математика">Математика</option>
+			    <option value="История">История</option>
+			    <option value="Инфроматика">Инфроматика</option>
+			 </select><br>
+
+			<div class="col">
+				
+				<label>Первый ответ</label><br>
+				<input name="answ1" type="text" data-for="answ"><br>
+				<label>Третий ответ</label><br>
+				<input name="answ2" type="text" data-for="answ"><br>
+			</div>
+
+			<div class="col">
+				<label>Второй ответ</label><br>
+				<input name="answ3" type="text" data-for="answ"><br>
+				<label>Четвёртый ответ</label><br>
+				<input name="answ4" type="text" data-for="answ">
+			</div>
+
+			<label data-for="last">Правильный ответ</label><br>
+			<input name="answr" type="text" data-for="answr"><br>
+
+			<a href="asd"><input type="submit" value="&#62;"></a>
+		</form>
+	</div>
+</body>
+</html>

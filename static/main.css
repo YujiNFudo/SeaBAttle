@@ -1,0 +1,259 @@
+/*fonts*/
+
+@import url('https://fonts.googleapis.com/css?family=Neucha');
+
+
+html, body {
+  	margin: 0;
+  	padding: 0;
+  	font-size: 10px;
+  	overflow: hidden;
+}
+html {
+	background: rgb(0,180,255);
+}
+
+canvas {
+  	display: block;
+  	position: absolute;
+  	left: 50%;
+    margin-right: -50%; 
+    transform: translate(-50%, 0%);
+  	top: 12em;
+  	z-index: 124;
+}
+
+a {
+	color: #000 !important;
+  	text-decoration: none;
+  	cursor: default;
+}
+
+/*f-titles*/
+
+.titles {
+	position: absolute;
+	z-index: 124;
+	left: 50%;
+    margin-right: -50%; 
+    transform: translate(-50%, 0%);
+    top: 55.6em;
+    width: 953px;
+    height: 80px;
+    font-family: 'Neucha', cursive;
+    font-weight: bold;
+    letter-spacing: 5px;
+    padding: 0px 10px;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-shadow: 3px 3px 0px rgba(255,255,255,0.6);
+	color: rgb(192,255,255);
+}
+
+.titles span:nth-child(1) {
+	float: left;font-size: 30px;
+	line-height: 80px;
+}
+.titles span:nth-child(2) {
+	float: right;font-size: 30px;
+	line-height: 80px;
+}
+
+/*f-control panel*/
+
+.ControlPanel {
+	z-index: 125;
+	width: 60em;
+	height: 170px;
+	position: fixed;
+
+	background: rgb(192,255,255);
+	border-radius: 7px;
+
+	bottom: 40px;
+	left: 50%;
+    margin-right: -50%; 
+    transform: translate(-50%, 0%);
+    font-family: 'Neucha', cursive;
+    font-weight: bold;
+}
+#textarea {
+	font-size: 35px;
+	letter-spacing: 2px;
+}
+.buttonDecor {
+	font-size: 25px;
+    min-width: 150px;
+    background: rgb(192,255,255);
+    padding: 10px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.buttonDecor:hover {
+	background: rgb(130, 217, 217);
+}
+
+.first {
+	width: 500px;
+}
+
+.left,.right {
+	display: inline-block;
+	width: min-content;
+	padding: 30px 35px;
+}
+.left div,.right div {
+	text-align: center;
+}
+.left div:nth-child(1),.right div:nth-child(1) {
+	margin-bottom: 15px;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.RandomButton {
+	height: 90px;
+	line-height: 90px;
+}
+.third {
+	text-align: center;
+}
+.third div {
+	font-size: 20px;
+	margin-top: calc(85px - 1.5em) ;
+
+}
+
+.third .n {
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 200px;
+}
+
+/*f-name*/
+
+#sname {
+	width: max-content;
+	overflow: hidden;
+
+	position: absolute;
+	left: 50px;
+	top: 30px;
+	font-size: 60px;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-shadow: 3px 3px 0px rgb(53,66,255);
+	color: rgb(192,255,255);
+}
+#palka {
+	width: 6px;
+	height: 55px;
+	background: rgb(192,255,255);
+
+	position: absolute;
+	left: 30px;
+	top: 35px;
+	box-shadow: 3px 3px 0px rgb(53,66,255);
+	
+
+}
+
+/* f-ships */
+
+.ship {
+	height: 30px;
+	width: 30px;
+	background: rgb(90,90,90);
+	display: inline-block;
+}
+span {
+	display: inline-block;
+	font-size: 25px;
+	margin-right: 15px;
+	margin-left: 3px;
+}
+.singledeck {
+	height: 30px;
+}
+.doubledeck {
+	height: 60px;
+}
+.tripledeck {
+	height: 90px;
+}
+.quadrodeck {
+	height: 120px;
+}
+
+/* f-selectedDB */
+
+.selectedDB {
+	position: fixed;
+	left: 20px;
+	bottom: 20px;
+	z-index: 124;
+	background: #ffffff80;
+	font-size: 15px;
+	text-transform: uppercase;
+    font-family: 'Neucha', cursive;
+    word-spacing: 8px;
+    letter-spacing: 2px;
+	padding: 5px;
+}
+
+/* f-menu */
+
+
+.menu {
+}
+.menu li {
+	position:relative; 
+	float:left; 
+	z-index: 333;
+	text-align: center;
+}
+.menu li ul {
+	display:none; 
+	position:absolute; 
+	left:0; 
+	bottom:100%;
+	z-index: 333;
+}
+.menuName:hover {
+	border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+}
+.menuName li:first-child {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.menuName li {
+	font-size: 20px;
+    min-width: 150px;
+    background: #f5f5f5;
+    padding: 10px;
+    border-bottom: 2px solid black;
+}
+
+.menu li:hover ul {
+	display:block;
+}
+.menu li ul li:hover {
+	background: rgb(130, 217, 217);
+}
+
+ul {
+    list-style: none;
+    display: block;
+    margin:0px;
+    padding:0px;
+}
+li {
+    float: left;
+    position: relative;
+    background: #fff;
+}

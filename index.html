@@ -1,0 +1,98 @@
+<!DOCTYPE html><html><head>
+    <script src="p5.min.js"></script>
+    <script src="p5.dom.min.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="modal.css">
+    <link rel="stylesheet" type="text/css" href="waves.css">
+    <meta charset="utf-8">
+
+  </head>
+  <body>
+
+    <div class="titles">
+      <span>Игрок</span>
+      <span>Бот Вася</span>
+    </div>
+
+    <div id="palka"></div>
+    
+    <div id="sname">Морской бой</div>
+
+    <div class="ControlPanel first">
+      <div class="left">
+
+        <div class="NewGameButton buttonDecor" onclick="history.go(0)">Новая игра</div>
+
+        <div class="addDB buttonDecor"><a href="addQuestion">Добавить БД</a></div> 
+
+      </div>
+      <div class="right">
+        
+        <div class="StartButton buttonDecor" onclick="gameFunctions.start()">Начать игру</div>
+
+        <ul class="menu">
+            <li class="menuName buttonDecor">
+                Выбрать БД
+                <ul>
+                    <li class="ToChange">Физика</li>
+                    <li class="ToChange">Математика</li>
+                    <li class="ToChange">История</li>
+                    <li class="ToChange">Информатика</li>
+                </ul>
+            </li>
+        </ul>
+
+      </div>
+    </div>
+    <div class="ControlPanel second" style="display:none;">
+      
+      <div class="left">
+
+        <div class="RandomButton buttonDecor" onclick="gameFunctions.stayRandom()">Случайная</div>
+
+      </div>
+      <div class="right" style="width: max-content;">
+        
+        <div class="ship quadrodeck" style="margin-bottom: 0px"></div>
+        <span>x1</span>
+        <div class="ship tripledeck"></div>
+        <span>x2</span>
+        <div class="ship doubledeck"></div>
+        <span>x3</span>
+        <div class="ship singledeck"></div>
+        <span>x4</span>
+
+      </div>
+
+    </div>
+    <div class="ControlPanel third" style="display:none;"><div id="textarea"></div>
+
+    <div class="NewGameButton buttonDecor n" onclick="history.go(0)">Сдаться</div>
+    </div>
+
+    <div id="questArea">
+      <div id="questWindow">
+        <span id="questHeader"></span>
+        <span id="answ1" class="answ"></span>
+        <span id="answ2" class="answ"></span>
+        <span id="answ3" class="answ"></span>
+        <span id="answ4" class="answ"></span>
+      </div>
+    </div>
+
+    <div class="wave">
+          <div class="wave__two"></div>
+          <div class="wave__one"></div>
+          <div class="wave__three"></div>
+      </div>
+
+    <div id="modalBlock"></div>
+
+    <div class="selectedDB">Тип вопроса не определён</div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+    <script src="sketch.js"></script>
+
+</body></html>
